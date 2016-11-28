@@ -4,7 +4,7 @@
     </logging>
 
     <testsuites>
-        <testsuite name="CrossKnowledge SubConverter test suite">
+        <testsuite name="CrossKnowledge DataEncrypter test suite">
             <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>
