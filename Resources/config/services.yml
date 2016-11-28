@@ -1,0 +1,3 @@
+services:
+    crossknowledge.data_encryptor:
+            class: CrossKnowledge\DataEncrypterBundle\Services\DataEncrypter
