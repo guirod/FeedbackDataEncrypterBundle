@@ -1,14 +1,7 @@
 CrossKnowledge DataEncrypter Bundle
 ===============================
 
-The CrossKnowledge/DataEncrypter aims to convert subtitles files from and to different formats.
-
-Formats:
-
-- SRT
-- WebVTT
-- TXT
-- TTAF1
+The CrossKnowledge/DataEncrypter aims to encrypt some data (array or string).
 
 Installation
 ------------
