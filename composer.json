@@ -1,6 +1,6 @@
 {
-  "name": "crossknowledge/data-encrypter-bundle",
-  "description": "Encrypter/decrypter service",
+  "name": "crossknowledge/feedback-data-encrypter-bundle",
+  "description": "Encrypter/decrypter service for Feedback service",
   "type": "symfony-bundle",
   "license": "MIT",
   "keywords": [
