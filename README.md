@@ -12,8 +12,8 @@ Add the bundle to your project:
 
 "repositories": [
         {
-            "type": "vcs",
-            "url": "git@gitlab.crossknowledge.com:aymeric.poude/data-encrypter-bundle.git"
+            "type": "git",
+            "url": "git@gitlab.crossknowledge.com:ip/feedback-data-encrypter-bundle.git"
         }
     ]
 ```
