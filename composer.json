@@ -17,7 +17,7 @@
     }
   ],
   "autoload": {
-    "psr-4": { "CrossKnowledge\\DataEncrypterBundle\\": "" }
+    "psr-4": { "CrossKnowledge\\FeedbackDataEncrypterBundle\\": "" }
   },
   "require": {
     "php": ">=5.5",

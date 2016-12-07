@@ -3,7 +3,7 @@
 
 namespace AppBundle\Tests\Services;
 
-use CrossKnowledge\DataEncrypterBundle\Services\DataEncrypter;
+use CrossKnowledge\FeedbackDataEncrypterBundle\Services\DataEncrypter;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class DataEncrypterTest extends WebTestCase
@@ -14,6 +14,16 @@ class DataEncrypterTest extends WebTestCase
         $encrypter = new DataEncrypter();
         $encrypted = $encrypter->encrypt($data, "test");
         $decrypted = $encrypter->decrypt($encrypted, "test");
+
+        $this->assertEquals($data, $decrypted);
+    }
+
+    public function testEncryptStringWithMaxKey()
+    {
+        $data = "This is a test with a long key of 32 chars";
+        $encrypter = new DataEncrypter();
+        $encrypted = $encrypter->encrypt($data, "maximum_key_with_thirty_two_char");
+        $decrypted = $encrypter->decrypt($encrypted, "maximum_key_with_thirty_two_char");
 
         $this->assertEquals($data, $decrypted);
     }

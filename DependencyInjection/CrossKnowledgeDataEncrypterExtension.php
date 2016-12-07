@@ -1,6 +1,6 @@
 <?php
 
-namespace CrossKnowledge\DataEncrypterBundle\DependencyInjection;
+namespace CrossKnowledge\FeedbackDataEncrypterBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

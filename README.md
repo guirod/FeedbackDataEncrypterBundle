@@ -1,21 +1,14 @@
-CrossKnowledge DataEncrypter Bundle
+CrossKnowledge FeedbackDataEncrypter Bundle
 ===============================
 
-The CrossKnowledge/DataEncrypter aims to convert subtitles files from and to different formats.
-
-Formats:
-
-- SRT
-- WebVTT
-- TXT
-- TTAF1
+The CrossKnowledge/FeedbackDataEncrypter aims to convert subtitles files from and to different formats.
 
 Installation
 ------------
 
 Add the bundle to your project:
 ```bash
-composer require crossknowledge/data-encrypter-bundle
+composer require crossknowledge/feedback-data-encrypter-bundle
 ```
 Enable bundle in your kernel:
 ```php
@@ -25,19 +18,19 @@ class AppKernel	extends Kernel
   {
 	  $bundles = array(
       ...
-      new \CrossKnowledge\DataEncrypterBundle\CrossKnowledgeDataEncrypter(),
+      new \CrossKnowledge\FeedbackDataEncrypterBundle\CrossKnowledgeFeedbackDataEncrypterBundle(),
 		);
     ...
 ```
 
 Now, to encrypt data, you can use the following service in your controller:
 ```php
-  $this->get('crossknowledge.data_encrypter')->encrypt($data, $key);
+  $this->get('crossknowledge.feedback_data_encrypter')->encrypt($data, $key);
 ```
 
 To decrypt data, you can use the following service in your controller:
 ```php
-  $this->get('crossknowledge.data_encrypter')->decrypt($data, $key);
+  $this->get('crossknowledge.feedback_data_encrypter')->decrypt($data, $key);
 ```
 
 License
@@ -51,7 +44,7 @@ About
 -----
 
 CrossKnowledgeDataEncryoterBundle is a [CrossKnowledge](https://crossknowledge.com) initiative.
-See also the list of [contributors](https://gitlab.com/CrossKnowledge/DataEncrypterBundle/contributors).
+See also the list of [contributors](https://gitlab.com/CrossKnowledge/FeedbackDataEncrypterBundle/contributors).
 A couple of "distribution" (travis,readme.md, etc..) files are inspired from FriendsOfSymfony/FOSUserBundle's.
 
 Contributions
@@ -64,7 +57,7 @@ We will try to integrate them. As long as there is no BC, anything can be sugges
 Reporting an issue or a feature request
 ---------------------------------------
 
-Issues and feature requests are tracked in the [Github issue tracker](https://github.com/CrossKnowledge/DataEncrypterBundle/issues).
+Issues and feature requests are tracked in the [Github issue tracker](https://github.com/CrossKnowledge/FeedbackDataEncrypterBundle/issues).
 
 When reporting a bug, it may be a good idea to reproduce it in a basic project
 built using the [Symfony Standard Edition](https://github.com/symfony/symfony-standard)
