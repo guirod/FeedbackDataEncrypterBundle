@@ -7,8 +7,19 @@ Installation
 ------------
 
 Add the bundle to your project:
+```php
+// composer.json
+
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "git@gitlab.crossknowledge.com:aymeric.poude/data-encrypter-bundle.git"
+        }
+    ]
+```
+
 ```bash
-composer require crossknowledge/feedback-data-encrypter-bundle
+composer require crossknowledge/feedback-data-encrypter-bundle:dev-master
 ```
 Enable bundle in your kernel:
 ```php
