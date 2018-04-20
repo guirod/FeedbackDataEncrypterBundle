@@ -1,0 +1,37 @@
+stages:
+  - test
+  - build
+
+test:php5:
+  stage: test
+  script:
+    - echo "Running tests"
+    - export SYMFONY_ENV=test
+    - rm -rf ./vendor/*
+    - rm -rf ./var/cache/*
+    - rm -rf ./var/logs/*
+    - composer install -o --no-dev
+    - phpunit --configuration phpunit.xml.dist --coverage-text
+  tags:
+    - test
+
+build_on_s3:
+  stage: build
+  script:
+    - echo "Building the app"
+    - export SYMFONY_ENV=test
+    - rm -rf ./vendor/*
+    - rm -rf ./var/cache/*
+    - rm -rf ./var/logs/*
+    - composer install -o --no-dev
+    - echo "Push to S3 Bucket"
+    - tar -czf /tmp/$CI_PIPELINE_ID-$CI_COMMIT_SHA.tar.gz --exclude=app/config/parameters.yml --exclude=var/cache/* --exclude=var/logs* --exclude=.git --exclude=.gitignore --warning=no-file-changed .
+    - aws s3 cp /tmp/$CI_PIPELINE_ID-$CI_COMMIT_SHA.tar.gz s3://$S3_BUCKET_NAME/$CI_PROJECT_PATH/
+    - rm /tmp/$CI_PIPELINE_ID-$CI_COMMIT_SHA.tar.gz
+  tags:
+    - build
+  dependencies:
+    - test:php5
+  environment:
+    name: S3
+    url: https://s3.console.aws.amazon.com/s3/buckets/$S3_BUCKET_NAME/$CI_PROJECT_PATH/
