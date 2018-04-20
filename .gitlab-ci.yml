@@ -12,6 +12,7 @@ test:php5:
     - rm -rf ./var/logs/*
     - composer install -o --no-dev
     - phpunit --configuration phpunit.xml.dist --coverage-text
+    - php bin/console security:check
   tags:
     - test
 
