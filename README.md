@@ -1,3 +1,7 @@
+[![pipeline status](https://gitlab.crossknowledge.com/ip/feedback-data-encrypter-bundle/badges/master/pipeline.svg)](https://gitlab.crossknowledge.com/ip/feedback-data-encrypter-bundle/commits/master)
+[![coverage report](https://gitlab.crossknowledge.com/ip/feedback-data-encrypter-bundle/badges/master/coverage.svg)](https://gitlab.crossknowledge.com/ip/feedback-data-encrypter-bundle/commits/master)
+
+
 CrossKnowledge FeedbackDataEncrypter Bundle
 ===============================
 
