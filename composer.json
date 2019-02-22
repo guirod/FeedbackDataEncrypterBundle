@@ -20,7 +20,7 @@
     "psr-4": { "CrossKnowledge\\FeedbackDataEncrypterBundle\\": "" }
   },
   "require": {
-    "php": ">=5.5",
+    "php": ">=5.6",
     "symfony/symfony": ">=2.6 <4.0"
   },
   "require-dev": {
