@@ -45,6 +45,6 @@ class DataEncrypter
             MCRYPT_MODE_ECB
         );
 
-        return json_decode($string, true);
+        return json_decode(preg_replace('/[[:cntrl:]]/', '', $string), true);
     }
 }
